@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root, .App, .App > div, .detail {
+  width: 100%;
+  height: 100%;
+}
+
+.App > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.App > div > div {
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #eee;
+}
+
+footer a.active {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.loading span {
+  width: 5px;
+  height: 20px;
+  background: lime;
+  display: inline-block;
+  margin-right: 7px;
+  animation: loading 1s linear infinite;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.login {
+  padding-top: 200px;
+}
+
+.login p {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.login p input, .login p button {
+  display: block;
+  margin: auto;
+  padding-left: 20px;
+  box-sizing: border-box;
+  outline: none;
+  width: 80%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail .nav {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+.detail .nav p {
+  flex: 1;
+  text-align: center;
+}
+
+.detail .list {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.nav p.active {
+  color: yellow;
+  background: green;
+}
+
+.diancan {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.diancan .left {
+  flex: 3;
+}
+
+.diancan .left p {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+}
+
+.diancan .right {
+  flex: 7;
+  overflow: hidden;
+}
+
+.diancan .right dl {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.diancan .right dl dt {
+  width: 120px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.diancan .right dl dt img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.diancan .right dl dd {
+  flex: 1;
+  height: 100%;
+}
+
+.left p.active {
+  background: red;
+  color: #fff;
+}
